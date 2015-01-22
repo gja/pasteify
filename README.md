@@ -1,6 +1,8 @@
 # pastify
 
-[Browserify][] transform for pasting in a relative html file
+[Browserify][] transform for pasting in a relative html file. The main usecase for this is the ability to write
+all your react HTML into a separate file, which can be "pasted" into the code. Make sure this transform is
+called before you call the reactify transform.
 
       // In myhtml.html
       <Hello name="World" />
