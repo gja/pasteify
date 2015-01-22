@@ -1,0 +1,1 @@
+pasteify("foo.js");
