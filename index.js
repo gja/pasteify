@@ -10,6 +10,8 @@ var through         = require('through');
 
 function replacePasteify(file) {
   var f = function(traverse, node, path, state) {
+    // TODO: Ensure the file exists.
+    // TODO: Raise an error if the file is not a literal
     var pasted = node.arguments[0].value;
     utils.append(fs.readFileSync(fspath.resolve(fspath.dirname(file), pasted)), state);
     utils.move(node.range[1], state);
